@@ -1,0 +1,269 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    /* border: 1px solid black; */
+    
+}
+
+.container{
+    
+    height: 100vh;
+    width: 100vw;
+}
+.navbar{
+    width: 100vw;
+    height:12%;
+    /* border: 1px solid black; */
+    display: flex;
+    background-color: #333333;
+
+}
+.grid{
+    width: 100vw;
+   min-height: 88%;
+   display: flex;
+   justify-content: space-evenly;
+   flex-wrap: wrap;
+    color: rgb(158, 157, 157);
+    padding: 1.5rem;
+}
+.filter-container ,.action-container{
+   
+    height: 75%;
+    margin-top: 1.5vh;
+    margin-left: 4rem;
+    border-radius: 5px;
+    background-color: #444444;
+
+
+}
+
+.filter-container{
+    width: 18rem;
+    display: flex;
+}
+
+.action-container{
+    width: 9rem;
+    display: flex;
+}
+.filter{
+    height: 100%;
+    width: 4.5rem;
+}
+.pink-color-btn{
+    background-color: #d595aa;
+}
+.blue-color-btn{
+    background-color: #5ecdde;
+}
+.green-color-btn{
+    background-color: #91e6c7;
+}
+.black-color-btn{
+    background-color: black;
+}
+
+.filter:hover{
+    background-color: #393939;
+}
+
+.filter div{
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    margin-top: 2.25vh;
+    border-radius: 2px;
+}
+
+.action{
+    width: 50%;
+    height: 100%;
+    border: 1px solid red;
+}
+.add,.delete{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+}
+.add{
+    padding-top: 0.3rem;
+}
+
+.add:hover,.delete:hover{
+    background-color: #393939;
+}
+
+.delete-state{
+    background-color:#393939 !important ;
+}
+
+.modal-container{
+    height: 18rem;
+    width: 35rem;
+    display: flex;
+    position: fixed;
+    top: calc((100vh - 18rem) /2);
+    left: calc((100vw - 35rem) /2);
+    box-shadow: 0px 5px 10px 0px ;
+}
+.writing-area{
+    height: 100%;
+    width: 75%;
+    background-color: white;
+    color: black;
+    padding:2rem;
+    outline: none;
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.writing-area[placeholder]:empty:before {
+    content: attr(placeholder);
+    color: #555; 
+}
+.filter-area{
+    height: 100%;
+    width: 25%;
+    background-color: #444;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    justify-content: space-evenly;
+    
+}
+
+.modal-filter{
+    
+    width: 50%;
+    height:15%;
+    opacity: 0.7;
+    
+}
+.pink:hover{
+    opacity: 1;
+}
+.blue:hover{
+    opacity: 1;
+}
+.green:hover{
+    opacity: 1;
+}
+.black:hover{
+    opacity: 1;
+}
+
+.pink{
+    background-color: #d595aa;
+}
+.blue{
+    background-color: #5ecdde;
+}
+.green{
+    background-color: #91e6c7;
+}
+.black{
+    background-color: black;
+}
+.active-modal-filter{
+    border:5px solid goldenrod;
+    opacity: 1;
+}
+.ticket{
+    width: 15rem;
+    height: 8rem;
+    /* border: 1px solid black; */
+    margin-bottom: 20px;
+    box-shadow: 1px 1px 3px grey;
+}
+.ticket-color{
+    width: 100%;
+    height:5%;
+}
+.ticket-id{
+    width: 100%;
+    height: 15%;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    opacity: 0.5;
+    padding-left: 10px;
+
+}
+.ticket-box{
+    width: 100%;
+    height: 80%;
+    color: black;
+    overflow-y: auto;
+    outline: none;
+    /* padding-left: 10px; */
+    font-size: 20px;
+    padding: 10px;
+}
+
+@media (max-width:768px)
+{
+    .ticket {
+        width: 15rem;
+        height: 8rem;
+        /* border: 1px solid black; */
+        margin-bottom: 10px;
+        margin-left: 17px;
+        margin-right: 100px;
+        box-shadow: 1px 1px 3px grey;
+    }
+    .modal-container {
+        height: 18rem;
+        width: 33rem;
+        display: flex;
+        position: fixed;
+        top: calc((100vh - 18rem) /2);
+        left: calc((100vw - 39rem) /2);
+        box-shadow: 0px 5px 10px 0px;
+    }
+}
+
+@media (max-width:600px) {
+    .action-container {
+        width: 4rem;
+        display: flex;
+        
+    }
+    .filter-container{
+        width: 14rem;
+    }
+    .filter-container, .action-container {
+        height: 75%;
+        margin-top: 1.5vh;
+        margin-left: 1rem;
+        
+    }
+    .modal-container {
+        height: 14rem;
+        width: 24rem;
+        top: calc((100vh - 14rem) /2);
+        left: calc((100vw - 24rem) /2);
+       
+    }
+    .add,.delete{
+        width: 48%;
+        height: 100%;
+        text-align: center;
+       
+        color: white;
+    }
+    .add{
+        padding-top: 0.56rem;
+        font-size: 2.5rem;
+    }
+    .delete{
+        padding-top: 0rem;
+        font-size: 2.5rem;
+    }
+    
+}
